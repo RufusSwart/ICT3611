@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Ass1_Bookings", "Ass1_Bookings\Ass1_Bookings.vbproj", "{604C5B5C-AF6D-405B-A4E2-DE692255167C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{604C5B5C-AF6D-405B-A4E2-DE692255167C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{604C5B5C-AF6D-405B-A4E2-DE692255167C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{604C5B5C-AF6D-405B-A4E2-DE692255167C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{604C5B5C-AF6D-405B-A4E2-DE692255167C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
