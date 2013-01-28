@@ -9,6 +9,7 @@
     Public PaymentradioButtonChanges As Integer
     Public exstra1radioButtonChanges As Integer
     Public exstra2radioButtonChanges As Integer
+    Public numbookings As Integer
     Function authenticate(ByRef name As String, ByRef pass As String, ByRef time As String) As Boolean
         Dim auth As Boolean
 

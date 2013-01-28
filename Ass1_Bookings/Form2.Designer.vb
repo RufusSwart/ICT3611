@@ -69,8 +69,7 @@ Partial Class Form2
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.ErrLabel15 = New System.Windows.Forms.Label()
-        Me.ErrLabel14 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
         Me.ErrLabel13 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
@@ -84,12 +83,12 @@ Partial Class Form2
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.ErrLabel18 = New System.Windows.Forms.Label()
+        Me.ErrLabel17 = New System.Windows.Forms.Label()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.RadioButton8 = New System.Windows.Forms.RadioButton()
         Me.RadioButton7 = New System.Windows.Forms.RadioButton()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.ErrLabel17 = New System.Windows.Forms.Label()
         Me.RadioButton5 = New System.Windows.Forms.RadioButton()
         Me.RadioButton6 = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -97,6 +96,7 @@ Partial Class Form2
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -150,8 +150,9 @@ Partial Class Form2
         '
         'LogoutToolStripMenuItem
         '
+        Me.LogoutToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(58, 20)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'Label1
@@ -224,7 +225,7 @@ Partial Class Form2
         '
         Me.ErrLabel12.AutoSize = True
         Me.ErrLabel12.ForeColor = System.Drawing.Color.Red
-        Me.ErrLabel12.Location = New System.Drawing.Point(242, 393)
+        Me.ErrLabel12.Location = New System.Drawing.Point(228, 363)
         Me.ErrLabel12.Name = "ErrLabel12"
         Me.ErrLabel12.Size = New System.Drawing.Size(68, 15)
         Me.ErrLabel12.TabIndex = 35
@@ -234,7 +235,7 @@ Partial Class Form2
         '
         Me.ErrLabel11.AutoSize = True
         Me.ErrLabel11.ForeColor = System.Drawing.Color.Red
-        Me.ErrLabel11.Location = New System.Drawing.Point(113, 393)
+        Me.ErrLabel11.Location = New System.Drawing.Point(96, 363)
         Me.ErrLabel11.Name = "ErrLabel11"
         Me.ErrLabel11.Size = New System.Drawing.Size(68, 15)
         Me.ErrLabel11.TabIndex = 34
@@ -436,9 +437,9 @@ Partial Class Form2
         Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(186, 371)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(53, 15)
+        Me.Label14.Size = New System.Drawing.Size(56, 15)
         Me.Label14.TabIndex = 11
-        Me.Label14.Text = "Children"
+        Me.Label14.Text = "Children:"
         '
         'Label13
         '
@@ -541,8 +542,7 @@ Partial Class Form2
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.ErrLabel15)
-        Me.GroupBox2.Controls.Add(Me.ErrLabel14)
+        Me.GroupBox2.Controls.Add(Me.Label19)
         Me.GroupBox2.Controls.Add(Me.ErrLabel13)
         Me.GroupBox2.Controls.Add(Me.Label16)
         Me.GroupBox2.Controls.Add(Me.Label15)
@@ -557,31 +557,21 @@ Partial Class Form2
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Room Detail"
         '
-        'ErrLabel15
+        'Label19
         '
-        Me.ErrLabel15.AutoSize = True
-        Me.ErrLabel15.ForeColor = System.Drawing.Color.Red
-        Me.ErrLabel15.Location = New System.Drawing.Point(153, 170)
-        Me.ErrLabel15.Name = "ErrLabel15"
-        Me.ErrLabel15.Size = New System.Drawing.Size(68, 15)
-        Me.ErrLabel15.TabIndex = 7
-        Me.ErrLabel15.Text = "ErrLabel15"
-        '
-        'ErrLabel14
-        '
-        Me.ErrLabel14.AutoSize = True
-        Me.ErrLabel14.ForeColor = System.Drawing.Color.Red
-        Me.ErrLabel14.Location = New System.Drawing.Point(153, 82)
-        Me.ErrLabel14.Name = "ErrLabel14"
-        Me.ErrLabel14.Size = New System.Drawing.Size(68, 15)
-        Me.ErrLabel14.TabIndex = 6
-        Me.ErrLabel14.Text = "ErrLabel14"
+        Me.Label19.AutoSize = True
+        Me.Label19.Location = New System.Drawing.Point(6, 24)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(81, 15)
+        Me.Label19.TabIndex = 36
+        Me.Label19.Text = "Select Room:"
         '
         'ErrLabel13
         '
         Me.ErrLabel13.AutoSize = True
         Me.ErrLabel13.ForeColor = System.Drawing.Color.Red
-        Me.ErrLabel13.Location = New System.Drawing.Point(7, 21)
+        Me.ErrLabel13.Location = New System.Drawing.Point(93, 21)
+        Me.ErrLabel13.Margin = New System.Windows.Forms.Padding(1, 0, 3, 0)
         Me.ErrLabel13.Name = "ErrLabel13"
         Me.ErrLabel13.Size = New System.Drawing.Size(68, 15)
         Me.ErrLabel13.TabIndex = 5
@@ -648,7 +638,7 @@ Partial Class Form2
         '
         Me.ErrLabel16.AutoSize = True
         Me.ErrLabel16.ForeColor = System.Drawing.Color.Red
-        Me.ErrLabel16.Location = New System.Drawing.Point(225, 76)
+        Me.ErrLabel16.Location = New System.Drawing.Point(88, -3)
         Me.ErrLabel16.Name = "ErrLabel16"
         Me.ErrLabel16.Size = New System.Drawing.Size(73, 16)
         Me.ErrLabel16.TabIndex = 4
@@ -700,6 +690,8 @@ Partial Class Form2
         '
         'GroupBox4
         '
+        Me.GroupBox4.Controls.Add(Me.ErrLabel18)
+        Me.GroupBox4.Controls.Add(Me.ErrLabel17)
         Me.GroupBox4.Controls.Add(Me.GroupBox6)
         Me.GroupBox4.Controls.Add(Me.GroupBox5)
         Me.GroupBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -710,9 +702,28 @@ Partial Class Form2
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "Special  Requests"
         '
+        'ErrLabel18
+        '
+        Me.ErrLabel18.AutoSize = True
+        Me.ErrLabel18.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel18.Location = New System.Drawing.Point(146, 0)
+        Me.ErrLabel18.Name = "ErrLabel18"
+        Me.ErrLabel18.Size = New System.Drawing.Size(73, 16)
+        Me.ErrLabel18.TabIndex = 2
+        Me.ErrLabel18.Text = "ErrLabel18"
+        '
+        'ErrLabel17
+        '
+        Me.ErrLabel17.AutoSize = True
+        Me.ErrLabel17.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel17.Location = New System.Drawing.Point(126, 0)
+        Me.ErrLabel17.Name = "ErrLabel17"
+        Me.ErrLabel17.Size = New System.Drawing.Size(73, 16)
+        Me.ErrLabel17.TabIndex = 4
+        Me.ErrLabel17.Text = "ErrLabel17"
+        '
         'GroupBox6
         '
-        Me.GroupBox6.Controls.Add(Me.ErrLabel18)
         Me.GroupBox6.Controls.Add(Me.RadioButton8)
         Me.GroupBox6.Controls.Add(Me.RadioButton7)
         Me.GroupBox6.Location = New System.Drawing.Point(9, 119)
@@ -720,16 +731,6 @@ Partial Class Form2
         Me.GroupBox6.Size = New System.Drawing.Size(267, 84)
         Me.GroupBox6.TabIndex = 3
         Me.GroupBox6.TabStop = False
-        '
-        'ErrLabel18
-        '
-        Me.ErrLabel18.AutoSize = True
-        Me.ErrLabel18.ForeColor = System.Drawing.Color.Red
-        Me.ErrLabel18.Location = New System.Drawing.Point(185, 18)
-        Me.ErrLabel18.Name = "ErrLabel18"
-        Me.ErrLabel18.Size = New System.Drawing.Size(73, 16)
-        Me.ErrLabel18.TabIndex = 2
-        Me.ErrLabel18.Text = "ErrLabel18"
         '
         'RadioButton8
         '
@@ -755,7 +756,6 @@ Partial Class Form2
         '
         'GroupBox5
         '
-        Me.GroupBox5.Controls.Add(Me.ErrLabel17)
         Me.GroupBox5.Controls.Add(Me.RadioButton5)
         Me.GroupBox5.Controls.Add(Me.RadioButton6)
         Me.GroupBox5.Location = New System.Drawing.Point(9, 21)
@@ -763,16 +763,6 @@ Partial Class Form2
         Me.GroupBox5.Size = New System.Drawing.Size(268, 76)
         Me.GroupBox5.TabIndex = 2
         Me.GroupBox5.TabStop = False
-        '
-        'ErrLabel17
-        '
-        Me.ErrLabel17.AutoSize = True
-        Me.ErrLabel17.ForeColor = System.Drawing.Color.Red
-        Me.ErrLabel17.Location = New System.Drawing.Point(182, 13)
-        Me.ErrLabel17.Name = "ErrLabel17"
-        Me.ErrLabel17.Size = New System.Drawing.Size(73, 16)
-        Me.ErrLabel17.TabIndex = 4
-        Me.ErrLabel17.Text = "ErrLabel17"
         '
         'RadioButton5
         '
@@ -816,6 +806,7 @@ Partial Class Form2
         '
         'GroupBox7
         '
+        Me.GroupBox7.Controls.Add(Me.Label20)
         Me.GroupBox7.Controls.Add(Me.Label17)
         Me.GroupBox7.Location = New System.Drawing.Point(752, 283)
         Me.GroupBox7.Name = "GroupBox7"
@@ -843,6 +834,16 @@ Partial Class Form2
         Me.Label18.Size = New System.Drawing.Size(248, 16)
         Me.Label18.TabIndex = 10
         Me.Label18.Text = "Please select the appropriate Menu item"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(6, 73)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(121, 16)
+        Me.Label20.TabIndex = 11
+        Me.Label20.Text = "* Required Flied"
         '
         'Form2
         '
@@ -872,6 +873,7 @@ Partial Class Form2
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
         Me.GroupBox6.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
@@ -951,10 +953,10 @@ Partial Class Form2
     Friend WithEvents ErrLabel8 As System.Windows.Forms.Label
     Friend WithEvents ErrLabel12 As System.Windows.Forms.Label
     Friend WithEvents ErrLabel11 As System.Windows.Forms.Label
-    Friend WithEvents ErrLabel15 As System.Windows.Forms.Label
-    Friend WithEvents ErrLabel14 As System.Windows.Forms.Label
     Friend WithEvents ErrLabel13 As System.Windows.Forms.Label
     Friend WithEvents ErrLabel16 As System.Windows.Forms.Label
     Friend WithEvents ErrLabel18 As System.Windows.Forms.Label
     Friend WithEvents ErrLabel17 As System.Windows.Forms.Label
+    Friend WithEvents Label19 As System.Windows.Forms.Label
+    Friend WithEvents Label20 As System.Windows.Forms.Label
 End Class

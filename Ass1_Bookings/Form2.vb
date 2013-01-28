@@ -8,10 +8,11 @@
         Me.Hide()
         Form3.Show()
     End Sub 'Show Bookings Click event
-
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Text = "Welcome " + user
         Label2.Text = "Login Time: " + dateTime
+        DateTimePicker1.Value = Now
+        DateTimePicker2.Value = DateAdd(DateInterval.Day, 7, Now)
         Label17.Text = ""
         GroupBox1.Hide()
         GroupBox2.Hide()
@@ -22,7 +23,6 @@
         Button2.Hide()
         populateErrorlabels()
     End Sub
-
     Private Sub SingleBookingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SingleBookingToolStripMenuItem.Click
         Label18.Hide()
         GroupBox1.Show()
@@ -41,11 +41,11 @@
         ListBox1.Items.Add("Room 107")
         ListBox1.Items.Add("Room 109")
         roomType = "single"
-        arrErrors = 17
+        arrErrors = 15
+        ErrLabel18.Hide()
         PaymentradioButtonChanges = 0
         exstra1radioButtonChanges = 0
     End Sub
-
     Private Sub DoubbleToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DoubbleToolStripMenuItem.Click
         Label18.Hide()
         ListBox1.Items.Clear()
@@ -54,6 +54,8 @@
         GroupBox3.Show()
         GroupBox4.Show()
         GroupBox7.Show()
+        ErrLabel18.Show()
+        GroupBox6.Show()
         Button1.Show()
         Button2.Show()
         ListBox1.Items.Add("Room 102")
@@ -62,16 +64,14 @@
         ListBox1.Items.Add("Room 108")
         ListBox1.Items.Add("Room 110")
         roomType = "double"
-        arrErrors = 18
+        arrErrors = 16
         exstra2radioButtonChanges = 0
         PaymentradioButtonChanges = 0
         exstra1radioButtonChanges = 0
     End Sub
-
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         clearFormData()
     End Sub
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim roomAvailable = checkAvailability(ListBox1.SelectedItem.ToString, DateTimePicker1.Value.Date, DateTimePicker2.Value.Date)
         If (roomAvailable = True And arrErrors <= 0) Then
@@ -204,14 +204,6 @@
         ErrLabel13.Text = ""
         arrErrors = arrErrors - 1
     End Sub
-    Private Sub DateTimePicker1_ValueChanged(ByVal sender As Object, ByVal e As EventArgs) Handles DateTimePicker1.ValueChanged
-        ErrLabel14.Text = ""
-        arrErrors = arrErrors - 1
-    End Sub
-    Private Sub DateTimePicker2_ValueChanged(ByVal sender As Object, ByVal e As EventArgs) Handles DateTimePicker2.ValueChanged
-        ErrLabel15.Text = ""
-        arrErrors = arrErrors - 1
-    End Sub
     Private Sub RadioButton1_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs) Handles RadioButton1.CheckedChanged
         ErrLabel16.Text = ""
         If (PaymentradioButtonChanges < 1) Then
@@ -254,27 +246,38 @@
         End If
         exstra1radioButtonChanges = exstra1radioButtonChanges + 1
     End Sub
-    Private Sub populateErrorlabels()
-        ErrLabel1.Text = "Error!"
-        ErrLabel2.Text = "Error!"
-        ErrLabel3.Text = "Error!"
-        ErrLabel4.Text = "Error!"
-        ErrLabel5.Text = "Error!"
-        ErrLabel6.Text = "Error!"
-        ErrLabel7.Text = "Error!"
-        ErrLabel8.Text = "Error!"
-        ErrLabel9.Text = "Error!"
-        ErrLabel10.Text = "Error!"
-        ErrLabel11.Text = "Error!"
-        ErrLabel12.Text = "Error!"
-        ErrLabel13.Text = "Error!"
-        ErrLabel14.Text = "Error!"
-        ErrLabel15.Text = "Error!"
-        ErrLabel16.Text = "Error!"
-        ErrLabel17.Text = "Error!"
-        ErrLabel18.Text = "Error!"
+    Private Sub RadioButton7_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs) Handles RadioButton7.CheckedChanged
+        ErrLabel18.Text = ""
+        If (exstra2radioButtonChanges < 1) Then
+            arrErrors = arrErrors - 1
+        End If
+        exstra2radioButtonChanges = exstra2radioButtonChanges + 1
     End Sub
-
+    Private Sub RadioButton8_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs) Handles RadioButton8.CheckedChanged
+        ErrLabel18.Text = ""
+        If (exstra2radioButtonChanges < 1) Then
+            arrErrors = arrErrors - 1
+        End If
+        exstra2radioButtonChanges = exstra2radioButtonChanges + 1
+    End Sub
+    Private Sub populateErrorlabels()
+        ErrLabel1.Text = "*"
+        ErrLabel2.Text = "*"
+        ErrLabel3.Text = "*"
+        ErrLabel4.Text = "*"
+        ErrLabel5.Text = "*"
+        ErrLabel6.Text = "*"
+        ErrLabel7.Text = "*"
+        ErrLabel8.Text = "*"
+        ErrLabel9.Text = "*"
+        ErrLabel10.Text = "*"
+        ErrLabel11.Text = "*"
+        ErrLabel12.Text = "*"
+        ErrLabel13.Text = "*"
+        ErrLabel16.Text = "*"
+        ErrLabel17.Text = "*"
+        ErrLabel18.Text = "*"
+    End Sub
     Private Sub clearFormData()
         TextBox1.Text = ""
         TextBox2.Text = ""
