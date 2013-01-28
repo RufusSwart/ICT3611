@@ -22,7 +22,6 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.CreateBookingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SingleBookingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -33,6 +32,18 @@ Partial Class Form2
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.ErrLabel12 = New System.Windows.Forms.Label()
+        Me.ErrLabel11 = New System.Windows.Forms.Label()
+        Me.ErrLabel10 = New System.Windows.Forms.Label()
+        Me.ErrLabel9 = New System.Windows.Forms.Label()
+        Me.ErrLabel8 = New System.Windows.Forms.Label()
+        Me.ErrLabel7 = New System.Windows.Forms.Label()
+        Me.ErrLabel6 = New System.Windows.Forms.Label()
+        Me.ErrLabel5 = New System.Windows.Forms.Label()
+        Me.ErrLabel4 = New System.Windows.Forms.Label()
+        Me.ErrLabel3 = New System.Windows.Forms.Label()
+        Me.ErrLabel2 = New System.Windows.Forms.Label()
+        Me.ErrLabel1 = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.TextBox9 = New System.Windows.Forms.TextBox()
@@ -58,46 +69,34 @@ Partial Class Form2
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ErrLabel15 = New System.Windows.Forms.Label()
+        Me.ErrLabel14 = New System.Windows.Forms.Label()
+        Me.ErrLabel13 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.ErrLabel16 = New System.Windows.Forms.Label()
         Me.RadioButton4 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.ErrLabel18 = New System.Windows.Forms.Label()
         Me.RadioButton8 = New System.Windows.Forms.RadioButton()
         Me.RadioButton7 = New System.Windows.Forms.RadioButton()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.ErrLabel17 = New System.Windows.Forms.Label()
         Me.RadioButton5 = New System.Windows.Forms.RadioButton()
         Me.RadioButton6 = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
-        Me.Label19 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -106,23 +105,6 @@ Partial Class Form2
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -194,17 +176,18 @@ Partial Class Form2
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.PictureBox11)
-        Me.GroupBox1.Controls.Add(Me.PictureBox10)
-        Me.GroupBox1.Controls.Add(Me.PictureBox9)
-        Me.GroupBox1.Controls.Add(Me.PictureBox8)
-        Me.GroupBox1.Controls.Add(Me.PictureBox7)
-        Me.GroupBox1.Controls.Add(Me.PictureBox6)
-        Me.GroupBox1.Controls.Add(Me.PictureBox5)
-        Me.GroupBox1.Controls.Add(Me.PictureBox4)
-        Me.GroupBox1.Controls.Add(Me.PictureBox3)
-        Me.GroupBox1.Controls.Add(Me.PictureBox2)
-        Me.GroupBox1.Controls.Add(Me.PictureBox1)
+        Me.GroupBox1.Controls.Add(Me.ErrLabel12)
+        Me.GroupBox1.Controls.Add(Me.ErrLabel11)
+        Me.GroupBox1.Controls.Add(Me.ErrLabel10)
+        Me.GroupBox1.Controls.Add(Me.ErrLabel9)
+        Me.GroupBox1.Controls.Add(Me.ErrLabel8)
+        Me.GroupBox1.Controls.Add(Me.ErrLabel7)
+        Me.GroupBox1.Controls.Add(Me.ErrLabel6)
+        Me.GroupBox1.Controls.Add(Me.ErrLabel5)
+        Me.GroupBox1.Controls.Add(Me.ErrLabel4)
+        Me.GroupBox1.Controls.Add(Me.ErrLabel3)
+        Me.GroupBox1.Controls.Add(Me.ErrLabel2)
+        Me.GroupBox1.Controls.Add(Me.ErrLabel1)
         Me.GroupBox1.Controls.Add(Me.ComboBox3)
         Me.GroupBox1.Controls.Add(Me.ComboBox2)
         Me.GroupBox1.Controls.Add(Me.TextBox9)
@@ -232,15 +215,135 @@ Partial Class Form2
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 44)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(376, 418)
+        Me.GroupBox1.Size = New System.Drawing.Size(394, 418)
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Guest Information"
         '
+        'ErrLabel12
+        '
+        Me.ErrLabel12.AutoSize = True
+        Me.ErrLabel12.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel12.Location = New System.Drawing.Point(242, 393)
+        Me.ErrLabel12.Name = "ErrLabel12"
+        Me.ErrLabel12.Size = New System.Drawing.Size(68, 15)
+        Me.ErrLabel12.TabIndex = 35
+        Me.ErrLabel12.Text = "ErrLabel12"
+        '
+        'ErrLabel11
+        '
+        Me.ErrLabel11.AutoSize = True
+        Me.ErrLabel11.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel11.Location = New System.Drawing.Point(113, 393)
+        Me.ErrLabel11.Name = "ErrLabel11"
+        Me.ErrLabel11.Size = New System.Drawing.Size(68, 15)
+        Me.ErrLabel11.TabIndex = 34
+        Me.ErrLabel11.Text = "ErrLabel11"
+        '
+        'ErrLabel10
+        '
+        Me.ErrLabel10.AutoSize = True
+        Me.ErrLabel10.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel10.Location = New System.Drawing.Point(315, 335)
+        Me.ErrLabel10.Name = "ErrLabel10"
+        Me.ErrLabel10.Size = New System.Drawing.Size(68, 15)
+        Me.ErrLabel10.TabIndex = 33
+        Me.ErrLabel10.Text = "ErrLabel10"
+        '
+        'ErrLabel9
+        '
+        Me.ErrLabel9.AutoSize = True
+        Me.ErrLabel9.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel9.Location = New System.Drawing.Point(315, 307)
+        Me.ErrLabel9.Name = "ErrLabel9"
+        Me.ErrLabel9.Size = New System.Drawing.Size(61, 15)
+        Me.ErrLabel9.TabIndex = 32
+        Me.ErrLabel9.Text = "ErrLabel9"
+        '
+        'ErrLabel8
+        '
+        Me.ErrLabel8.AutoSize = True
+        Me.ErrLabel8.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel8.Location = New System.Drawing.Point(315, 279)
+        Me.ErrLabel8.Name = "ErrLabel8"
+        Me.ErrLabel8.Size = New System.Drawing.Size(61, 15)
+        Me.ErrLabel8.TabIndex = 31
+        Me.ErrLabel8.Text = "ErrLabel8"
+        '
+        'ErrLabel7
+        '
+        Me.ErrLabel7.AutoSize = True
+        Me.ErrLabel7.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel7.Location = New System.Drawing.Point(315, 242)
+        Me.ErrLabel7.Name = "ErrLabel7"
+        Me.ErrLabel7.Size = New System.Drawing.Size(61, 15)
+        Me.ErrLabel7.TabIndex = 30
+        Me.ErrLabel7.Text = "ErrLabel7"
+        '
+        'ErrLabel6
+        '
+        Me.ErrLabel6.AutoSize = True
+        Me.ErrLabel6.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel6.Location = New System.Drawing.Point(315, 214)
+        Me.ErrLabel6.Name = "ErrLabel6"
+        Me.ErrLabel6.Size = New System.Drawing.Size(61, 15)
+        Me.ErrLabel6.TabIndex = 29
+        Me.ErrLabel6.Text = "ErrLabel6"
+        '
+        'ErrLabel5
+        '
+        Me.ErrLabel5.AutoSize = True
+        Me.ErrLabel5.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel5.Location = New System.Drawing.Point(315, 185)
+        Me.ErrLabel5.Name = "ErrLabel5"
+        Me.ErrLabel5.Size = New System.Drawing.Size(61, 15)
+        Me.ErrLabel5.TabIndex = 28
+        Me.ErrLabel5.Text = "ErrLabel5"
+        '
+        'ErrLabel4
+        '
+        Me.ErrLabel4.AutoSize = True
+        Me.ErrLabel4.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel4.Location = New System.Drawing.Point(315, 152)
+        Me.ErrLabel4.Name = "ErrLabel4"
+        Me.ErrLabel4.Size = New System.Drawing.Size(61, 15)
+        Me.ErrLabel4.TabIndex = 27
+        Me.ErrLabel4.Text = "ErrLabel4"
+        '
+        'ErrLabel3
+        '
+        Me.ErrLabel3.AutoSize = True
+        Me.ErrLabel3.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel3.Location = New System.Drawing.Point(315, 110)
+        Me.ErrLabel3.Name = "ErrLabel3"
+        Me.ErrLabel3.Size = New System.Drawing.Size(61, 15)
+        Me.ErrLabel3.TabIndex = 26
+        Me.ErrLabel3.Text = "ErrLabel3"
+        '
+        'ErrLabel2
+        '
+        Me.ErrLabel2.AutoSize = True
+        Me.ErrLabel2.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel2.Location = New System.Drawing.Point(315, 60)
+        Me.ErrLabel2.Name = "ErrLabel2"
+        Me.ErrLabel2.Size = New System.Drawing.Size(61, 15)
+        Me.ErrLabel2.TabIndex = 25
+        Me.ErrLabel2.Text = "ErrLabel2"
+        '
+        'ErrLabel1
+        '
+        Me.ErrLabel1.AutoSize = True
+        Me.ErrLabel1.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel1.Location = New System.Drawing.Point(315, 31)
+        Me.ErrLabel1.Name = "ErrLabel1"
+        Me.ErrLabel1.Size = New System.Drawing.Size(61, 15)
+        Me.ErrLabel1.TabIndex = 24
+        Me.ErrLabel1.Text = "ErrLabel1"
+        '
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6"})
+        Me.ComboBox3.Items.AddRange(New Object() {"0", "1", "2", "3", "4", "5", "6"})
         Me.ComboBox3.Location = New System.Drawing.Point(245, 363)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(61, 23)
@@ -438,9 +541,9 @@ Partial Class Form2
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.PictureBox14)
-        Me.GroupBox2.Controls.Add(Me.PictureBox13)
-        Me.GroupBox2.Controls.Add(Me.PictureBox12)
+        Me.GroupBox2.Controls.Add(Me.ErrLabel15)
+        Me.GroupBox2.Controls.Add(Me.ErrLabel14)
+        Me.GroupBox2.Controls.Add(Me.ErrLabel13)
         Me.GroupBox2.Controls.Add(Me.Label16)
         Me.GroupBox2.Controls.Add(Me.Label15)
         Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
@@ -453,6 +556,36 @@ Partial Class Form2
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Room Detail"
+        '
+        'ErrLabel15
+        '
+        Me.ErrLabel15.AutoSize = True
+        Me.ErrLabel15.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel15.Location = New System.Drawing.Point(153, 170)
+        Me.ErrLabel15.Name = "ErrLabel15"
+        Me.ErrLabel15.Size = New System.Drawing.Size(68, 15)
+        Me.ErrLabel15.TabIndex = 7
+        Me.ErrLabel15.Text = "ErrLabel15"
+        '
+        'ErrLabel14
+        '
+        Me.ErrLabel14.AutoSize = True
+        Me.ErrLabel14.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel14.Location = New System.Drawing.Point(153, 82)
+        Me.ErrLabel14.Name = "ErrLabel14"
+        Me.ErrLabel14.Size = New System.Drawing.Size(68, 15)
+        Me.ErrLabel14.TabIndex = 6
+        Me.ErrLabel14.Text = "ErrLabel14"
+        '
+        'ErrLabel13
+        '
+        Me.ErrLabel13.AutoSize = True
+        Me.ErrLabel13.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel13.Location = New System.Drawing.Point(7, 21)
+        Me.ErrLabel13.Name = "ErrLabel13"
+        Me.ErrLabel13.Size = New System.Drawing.Size(68, 15)
+        Me.ErrLabel13.TabIndex = 5
+        Me.ErrLabel13.Text = "ErrLabel13"
         '
         'Label16
         '
@@ -498,7 +631,7 @@ Partial Class Form2
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.PictureBox17)
+        Me.GroupBox3.Controls.Add(Me.ErrLabel16)
         Me.GroupBox3.Controls.Add(Me.RadioButton4)
         Me.GroupBox3.Controls.Add(Me.RadioButton3)
         Me.GroupBox3.Controls.Add(Me.RadioButton2)
@@ -510,6 +643,16 @@ Partial Class Form2
         Me.GroupBox3.TabIndex = 5
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "Payment Info"
+        '
+        'ErrLabel16
+        '
+        Me.ErrLabel16.AutoSize = True
+        Me.ErrLabel16.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel16.Location = New System.Drawing.Point(225, 76)
+        Me.ErrLabel16.Name = "ErrLabel16"
+        Me.ErrLabel16.Size = New System.Drawing.Size(73, 16)
+        Me.ErrLabel16.TabIndex = 4
+        Me.ErrLabel16.Text = "ErrLabel16"
         '
         'RadioButton4
         '
@@ -569,19 +712,29 @@ Partial Class Form2
         '
         'GroupBox6
         '
-        Me.GroupBox6.Controls.Add(Me.PictureBox16)
+        Me.GroupBox6.Controls.Add(Me.ErrLabel18)
         Me.GroupBox6.Controls.Add(Me.RadioButton8)
         Me.GroupBox6.Controls.Add(Me.RadioButton7)
-        Me.GroupBox6.Location = New System.Drawing.Point(7, 84)
+        Me.GroupBox6.Location = New System.Drawing.Point(9, 119)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(267, 66)
+        Me.GroupBox6.Size = New System.Drawing.Size(267, 84)
         Me.GroupBox6.TabIndex = 3
         Me.GroupBox6.TabStop = False
+        '
+        'ErrLabel18
+        '
+        Me.ErrLabel18.AutoSize = True
+        Me.ErrLabel18.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel18.Location = New System.Drawing.Point(185, 18)
+        Me.ErrLabel18.Name = "ErrLabel18"
+        Me.ErrLabel18.Size = New System.Drawing.Size(73, 16)
+        Me.ErrLabel18.TabIndex = 2
+        Me.ErrLabel18.Text = "ErrLabel18"
         '
         'RadioButton8
         '
         Me.RadioButton8.AutoSize = True
-        Me.RadioButton8.Location = New System.Drawing.Point(130, 27)
+        Me.RadioButton8.Location = New System.Drawing.Point(128, 37)
         Me.RadioButton8.Name = "RadioButton8"
         Me.RadioButton8.Size = New System.Drawing.Size(130, 20)
         Me.RadioButton8.TabIndex = 1
@@ -592,7 +745,7 @@ Partial Class Form2
         'RadioButton7
         '
         Me.RadioButton7.AutoSize = True
-        Me.RadioButton7.Location = New System.Drawing.Point(13, 27)
+        Me.RadioButton7.Location = New System.Drawing.Point(11, 37)
         Me.RadioButton7.Name = "RadioButton7"
         Me.RadioButton7.Size = New System.Drawing.Size(98, 20)
         Me.RadioButton7.TabIndex = 0
@@ -602,19 +755,29 @@ Partial Class Form2
         '
         'GroupBox5
         '
-        Me.GroupBox5.Controls.Add(Me.PictureBox15)
+        Me.GroupBox5.Controls.Add(Me.ErrLabel17)
         Me.GroupBox5.Controls.Add(Me.RadioButton5)
         Me.GroupBox5.Controls.Add(Me.RadioButton6)
-        Me.GroupBox5.Location = New System.Drawing.Point(6, 21)
+        Me.GroupBox5.Location = New System.Drawing.Point(9, 21)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(268, 57)
+        Me.GroupBox5.Size = New System.Drawing.Size(268, 76)
         Me.GroupBox5.TabIndex = 2
         Me.GroupBox5.TabStop = False
+        '
+        'ErrLabel17
+        '
+        Me.ErrLabel17.AutoSize = True
+        Me.ErrLabel17.ForeColor = System.Drawing.Color.Red
+        Me.ErrLabel17.Location = New System.Drawing.Point(182, 13)
+        Me.ErrLabel17.Name = "ErrLabel17"
+        Me.ErrLabel17.Size = New System.Drawing.Size(73, 16)
+        Me.ErrLabel17.TabIndex = 4
+        Me.ErrLabel17.Text = "ErrLabel17"
         '
         'RadioButton5
         '
         Me.RadioButton5.AutoSize = True
-        Me.RadioButton5.Location = New System.Drawing.Point(14, 21)
+        Me.RadioButton5.Location = New System.Drawing.Point(11, 34)
         Me.RadioButton5.Name = "RadioButton5"
         Me.RadioButton5.Size = New System.Drawing.Size(79, 20)
         Me.RadioButton5.TabIndex = 0
@@ -625,7 +788,7 @@ Partial Class Form2
         'RadioButton6
         '
         Me.RadioButton6.AutoSize = True
-        Me.RadioButton6.Location = New System.Drawing.Point(131, 21)
+        Me.RadioButton6.Location = New System.Drawing.Point(130, 34)
         Me.RadioButton6.Name = "RadioButton6"
         Me.RadioButton6.Size = New System.Drawing.Size(108, 20)
         Me.RadioButton6.TabIndex = 1
@@ -635,7 +798,7 @@ Partial Class Form2
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(752, 415)
+        Me.Button1.Location = New System.Drawing.Point(847, 439)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(104, 23)
         Me.Button1.TabIndex = 7
@@ -644,7 +807,7 @@ Partial Class Form2
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(889, 415)
+        Me.Button2.Location = New System.Drawing.Point(957, 439)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 8
@@ -653,7 +816,6 @@ Partial Class Form2
         '
         'GroupBox7
         '
-        Me.GroupBox7.Controls.Add(Me.Label19)
         Me.GroupBox7.Controls.Add(Me.Label17)
         Me.GroupBox7.Location = New System.Drawing.Point(752, 283)
         Me.GroupBox7.Name = "GroupBox7"
@@ -662,20 +824,11 @@ Partial Class Form2
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "Status"
         '
-        'Label19
-        '
-        Me.Label19.AutoSize = True
-        Me.Label19.ForeColor = System.Drawing.Color.Red
-        Me.Label19.Location = New System.Drawing.Point(10, 62)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(45, 13)
-        Me.Label19.TabIndex = 1
-        Me.Label19.Text = "Label19"
-        '
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(7, 27)
+        Me.Label17.ForeColor = System.Drawing.Color.Red
+        Me.Label17.Location = New System.Drawing.Point(6, 21)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(45, 13)
         Me.Label17.TabIndex = 0
@@ -690,193 +843,6 @@ Partial Class Form2
         Me.Label18.Size = New System.Drawing.Size(248, 16)
         Me.Label18.TabIndex = 10
         Me.Label18.Text = "Please select the appropriate Menu item"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox1.ErrorImage = CType(resources.GetObject("PictureBox1.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(313, 31)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox1.TabIndex = 24
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImage = CType(resources.GetObject("PictureBox2.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox2.ErrorImage = CType(resources.GetObject("PictureBox2.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox2.InitialImage = CType(resources.GetObject("PictureBox2.InitialImage"), System.Drawing.Image)
-        Me.PictureBox2.Location = New System.Drawing.Point(313, 60)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox2.TabIndex = 25
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackgroundImage = CType(resources.GetObject("PictureBox3.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox3.ErrorImage = CType(resources.GetObject("PictureBox3.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox3.InitialImage = CType(resources.GetObject("PictureBox3.InitialImage"), System.Drawing.Image)
-        Me.PictureBox3.Location = New System.Drawing.Point(312, 102)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox3.TabIndex = 26
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackgroundImage = CType(resources.GetObject("PictureBox4.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox4.ErrorImage = CType(resources.GetObject("PictureBox4.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox4.InitialImage = CType(resources.GetObject("PictureBox4.InitialImage"), System.Drawing.Image)
-        Me.PictureBox4.Location = New System.Drawing.Point(312, 149)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox4.TabIndex = 27
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.BackgroundImage = CType(resources.GetObject("PictureBox5.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox5.ErrorImage = CType(resources.GetObject("PictureBox5.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox5.InitialImage = CType(resources.GetObject("PictureBox5.InitialImage"), System.Drawing.Image)
-        Me.PictureBox5.Location = New System.Drawing.Point(312, 182)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox5.TabIndex = 28
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.BackgroundImage = CType(resources.GetObject("PictureBox6.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox6.ErrorImage = CType(resources.GetObject("PictureBox6.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox6.InitialImage = CType(resources.GetObject("PictureBox6.InitialImage"), System.Drawing.Image)
-        Me.PictureBox6.Location = New System.Drawing.Point(312, 211)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox6.TabIndex = 29
-        Me.PictureBox6.TabStop = False
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.BackgroundImage = CType(resources.GetObject("PictureBox7.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox7.ErrorImage = CType(resources.GetObject("PictureBox7.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox7.InitialImage = CType(resources.GetObject("PictureBox7.InitialImage"), System.Drawing.Image)
-        Me.PictureBox7.Location = New System.Drawing.Point(312, 243)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox7.TabIndex = 30
-        Me.PictureBox7.TabStop = False
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.BackgroundImage = CType(resources.GetObject("PictureBox8.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox8.ErrorImage = CType(resources.GetObject("PictureBox8.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox8.InitialImage = CType(resources.GetObject("PictureBox8.InitialImage"), System.Drawing.Image)
-        Me.PictureBox8.Location = New System.Drawing.Point(312, 276)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox8.TabIndex = 31
-        Me.PictureBox8.TabStop = False
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.BackgroundImage = CType(resources.GetObject("PictureBox9.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox9.ErrorImage = CType(resources.GetObject("PictureBox9.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox9.InitialImage = CType(resources.GetObject("PictureBox9.InitialImage"), System.Drawing.Image)
-        Me.PictureBox9.Location = New System.Drawing.Point(312, 305)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox9.TabIndex = 32
-        Me.PictureBox9.TabStop = False
-        '
-        'PictureBox10
-        '
-        Me.PictureBox10.BackgroundImage = CType(resources.GetObject("PictureBox10.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox10.ErrorImage = CType(resources.GetObject("PictureBox10.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox10.InitialImage = CType(resources.GetObject("PictureBox10.InitialImage"), System.Drawing.Image)
-        Me.PictureBox10.Location = New System.Drawing.Point(312, 333)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox10.TabIndex = 33
-        Me.PictureBox10.TabStop = False
-        '
-        'PictureBox11
-        '
-        Me.PictureBox11.BackgroundImage = CType(resources.GetObject("PictureBox11.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox11.ErrorImage = CType(resources.GetObject("PictureBox11.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox11.InitialImage = CType(resources.GetObject("PictureBox11.InitialImage"), System.Drawing.Image)
-        Me.PictureBox11.Location = New System.Drawing.Point(313, 363)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox11.TabIndex = 34
-        Me.PictureBox11.TabStop = False
-        '
-        'PictureBox12
-        '
-        Me.PictureBox12.BackgroundImage = CType(resources.GetObject("PictureBox12.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox12.ErrorImage = CType(resources.GetObject("PictureBox12.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox12.InitialImage = CType(resources.GetObject("PictureBox12.InitialImage"), System.Drawing.Image)
-        Me.PictureBox12.Location = New System.Drawing.Point(236, 29)
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox12.TabIndex = 35
-        Me.PictureBox12.TabStop = False
-        '
-        'PictureBox13
-        '
-        Me.PictureBox13.BackgroundImage = CType(resources.GetObject("PictureBox13.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox13.ErrorImage = CType(resources.GetObject("PictureBox13.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox13.InitialImage = CType(resources.GetObject("PictureBox13.InitialImage"), System.Drawing.Image)
-        Me.PictureBox13.Location = New System.Drawing.Point(270, 110)
-        Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox13.TabIndex = 36
-        Me.PictureBox13.TabStop = False
-        '
-        'PictureBox14
-        '
-        Me.PictureBox14.BackgroundImage = CType(resources.GetObject("PictureBox14.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox14.ErrorImage = CType(resources.GetObject("PictureBox14.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox14.InitialImage = CType(resources.GetObject("PictureBox14.InitialImage"), System.Drawing.Image)
-        Me.PictureBox14.Location = New System.Drawing.Point(104, 13)
-        Me.PictureBox14.Name = "PictureBox14"
-        Me.PictureBox14.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox14.TabIndex = 37
-        Me.PictureBox14.TabStop = False
-        '
-        'PictureBox15
-        '
-        Me.PictureBox15.BackgroundImage = CType(resources.GetObject("PictureBox15.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox15.ErrorImage = CType(resources.GetObject("PictureBox15.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox15.InitialImage = CType(resources.GetObject("PictureBox15.InitialImage"), System.Drawing.Image)
-        Me.PictureBox15.Location = New System.Drawing.Point(241, 10)
-        Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox15.TabIndex = 38
-        Me.PictureBox15.TabStop = False
-        '
-        'PictureBox16
-        '
-        Me.PictureBox16.BackgroundImage = CType(resources.GetObject("PictureBox16.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox16.ErrorImage = CType(resources.GetObject("PictureBox16.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox16.InitialImage = CType(resources.GetObject("PictureBox16.InitialImage"), System.Drawing.Image)
-        Me.PictureBox16.Location = New System.Drawing.Point(240, 8)
-        Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox16.TabIndex = 39
-        Me.PictureBox16.TabStop = False
-        '
-        'PictureBox17
-        '
-        Me.PictureBox17.BackgroundImage = CType(resources.GetObject("PictureBox17.BackgroundImage"), System.Drawing.Image)
-        Me.PictureBox17.ErrorImage = CType(resources.GetObject("PictureBox17.ErrorImage"), System.Drawing.Image)
-        Me.PictureBox17.InitialImage = CType(resources.GetObject("PictureBox17.InitialImage"), System.Drawing.Image)
-        Me.PictureBox17.Location = New System.Drawing.Point(288, 9)
-        Me.PictureBox17.Name = "PictureBox17"
-        Me.PictureBox17.Size = New System.Drawing.Size(20, 23)
-        Me.PictureBox17.TabIndex = 32
-        Me.PictureBox17.TabStop = False
         '
         'Form2
         '
@@ -912,23 +878,6 @@ Partial Class Form2
         Me.GroupBox5.PerformLayout()
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -990,22 +939,22 @@ Partial Class Form2
     Friend WithEvents GroupBox7 As System.Windows.Forms.GroupBox
     Friend WithEvents Label17 As System.Windows.Forms.Label
     Friend WithEvents Label18 As System.Windows.Forms.Label
-    Friend WithEvents Label19 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox11 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox10 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox9 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox8 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox14 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox13 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox12 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox17 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox16 As System.Windows.Forms.PictureBox
-    Friend WithEvents PictureBox15 As System.Windows.Forms.PictureBox
+    Friend WithEvents ErrLabel7 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel6 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel5 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel4 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel3 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel2 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel1 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel10 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel9 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel8 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel12 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel11 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel15 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel14 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel13 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel16 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel18 As System.Windows.Forms.Label
+    Friend WithEvents ErrLabel17 As System.Windows.Forms.Label
 End Class
