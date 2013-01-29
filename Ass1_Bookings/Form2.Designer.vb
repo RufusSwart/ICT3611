@@ -94,9 +94,9 @@ Partial Class Form2
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -815,6 +815,16 @@ Partial Class Form2
         Me.GroupBox7.TabStop = False
         Me.GroupBox7.Text = "Status"
         '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(6, 73)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(121, 16)
+        Me.Label20.TabIndex = 11
+        Me.Label20.Text = "* Required Flied"
+        '
         'Label17
         '
         Me.Label17.AutoSize = True
@@ -834,16 +844,6 @@ Partial Class Form2
         Me.Label18.Size = New System.Drawing.Size(248, 16)
         Me.Label18.TabIndex = 10
         Me.Label18.Text = "Please select the appropriate Menu item"
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(6, 73)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(121, 16)
-        Me.Label20.TabIndex = 11
-        Me.Label20.Text = "* Required Flied"
         '
         'Form2
         '

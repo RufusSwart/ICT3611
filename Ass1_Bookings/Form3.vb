@@ -7,7 +7,6 @@
 
     Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         numbookings = getArrayLength()
-
         If (numbookings = 0) Then
             Label1.Text = "No Current bookings"
             DataGridView1.Hide()
@@ -94,7 +93,7 @@
                     Else
                         dt.Rows(dt.Rows.Count - 1)("Additional Requests") = arrData(i, 17)
                     End If
-                    Label1.Text = ""
+                    Label1.Text = "All Current Bookings"
                 Next
 
                 DataGridView1.DataSource = dt

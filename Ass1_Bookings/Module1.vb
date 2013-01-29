@@ -10,6 +10,8 @@
     Public exstra1radioButtonChanges As Integer
     Public exstra2radioButtonChanges As Integer
     Public numbookings As Integer
+    Public flag As Integer
+    Public full As Boolean
     Function authenticate(ByRef name As String, ByRef pass As String, ByRef time As String) As Boolean
         Dim auth As Boolean
 
@@ -34,8 +36,6 @@
 
     Function checkAvailability(ByRef room As String, ByRef startDate As String, ByRef endDate As String)
         Dim avStatus As Boolean
-        Dim flag As Integer
-        Dim full As Boolean
         Dim arrLength As Integer = 0
 
         arrLength = getArrayLength()

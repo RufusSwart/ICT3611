@@ -5,8 +5,9 @@
         logout()
     End Sub 'LogOut Click event
     Private Sub ViewBookingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewBookingsToolStripMenuItem.Click
+        Dim f3 As New Form3
         Me.Hide()
-        Form3.Show()
+        f3.Show()
     End Sub 'Show Bookings Click event
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Label1.Text = "Welcome " + user
@@ -74,7 +75,7 @@
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim roomAvailable = checkAvailability(ListBox1.SelectedItem.ToString, DateTimePicker1.Value.Date, DateTimePicker2.Value.Date)
-        If (roomAvailable = True And arrErrors <= 0) Then
+        If (roomAvailable = True And arrErrors <= 0 And full = False) Then
             Label17.Text = "Room Available"
             Label17.ForeColor = Color.Green
             arrData(i, 0) = user
@@ -140,10 +141,14 @@
             Button1.Hide()
             Button2.Hide()
             clearFormData()
+            MsgBox(arrData(i - 1, 13) + " Successfully booked! Thank you :)")
         Else
             If roomAvailable = False Then
                 Label17.Text = "Room Not Available"
                 Label17.ForeColor = Color.Red
+            End If
+            If full = True Then
+                Label17.Text += " We are fully booked!"
             End If
             If arrErrors > 0 Then
                 Dim a As Integer
