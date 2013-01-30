@@ -106,7 +106,6 @@ Partial Class Form2
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -880,7 +879,6 @@ Partial Class Form2
         '
         'GroupBox7
         '
-        Me.GroupBox7.Controls.Add(Me.LinkLabel1)
         Me.GroupBox7.Controls.Add(Me.Label20)
         Me.GroupBox7.Controls.Add(Me.Label17)
         Me.GroupBox7.Location = New System.Drawing.Point(752, 283)
@@ -939,16 +937,6 @@ Partial Class Form2
         Me.Label22.Size = New System.Drawing.Size(45, 13)
         Me.Label22.TabIndex = 13
         Me.Label22.Text = "Label22"
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Location = New System.Drawing.Point(6, 45)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(59, 13)
-        Me.LinkLabel1.TabIndex = 14
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "LinkLabel1"
         '
         'Form2
         '
@@ -1078,5 +1066,4 @@ Partial Class Form2
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
-    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
 End Class
