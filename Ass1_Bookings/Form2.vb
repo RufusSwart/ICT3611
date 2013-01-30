@@ -1,4 +1,6 @@
-﻿Public Class Form2
+﻿Imports System.Text.RegularExpressions
+
+Public Class Form2
 
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
         Me.Hide()
@@ -74,88 +76,89 @@
         clearFormData()
     End Sub
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim roomAvailable = checkAvailability(ListBox1.SelectedItem.ToString, DateTimePicker1.Value.Date, DateTimePicker2.Value.Date)
-        If (roomAvailable = True And arrErrors <= 0 And full = False) Then
-            Label17.Text = "Room Available"
-            Label17.ForeColor = Color.Green
-            arrData(i, 0) = user
-            arrData(i, 1) = Now
-            arrData(i, 2) = TextBox1.Text
-            arrData(i, 3) = TextBox2.Text
-            arrData(i, 4) = TextBox3.Text
-            arrData(i, 5) = TextBox4.Text
-            arrData(i, 6) = TextBox5.Text
-            arrData(i, 7) = TextBox6.Text
-            arrData(i, 8) = ComboBox1.SelectedItem.ToString
-            arrData(i, 9) = TextBox7.Text
-            arrData(i, 10) = TextBox9.Text
-            arrData(i, 11) = ComboBox2.SelectedItem.ToString
-            arrData(i, 12) = ComboBox3.SelectedItem.ToString
-            arrData(i, 13) = ListBox1.SelectedItem.ToString
-            arrData(i, 14) = DateTimePicker1.Value.Date
-            arrData(i, 15) = DateTimePicker2.Value.Date
+        Dim check = checkAllFields()
+        If check = True Then
+            Dim roomAvailable = checkAvailability(ListBox1.SelectedItem.ToString, DateTimePicker1.Value.Date, DateTimePicker2.Value.Date)
+            If (roomAvailable = True And full = False) Then
+                Label17.Text = "Room Available"
+                Label17.ForeColor = Color.Green
+                arrData(i, 0) = user
+                arrData(i, 1) = Now
+                arrData(i, 2) = TextBox1.Text
+                arrData(i, 3) = TextBox2.Text
+                arrData(i, 4) = TextBox3.Text
+                arrData(i, 5) = TextBox4.Text
+                arrData(i, 6) = TextBox5.Text
+                arrData(i, 7) = TextBox6.Text
+                arrData(i, 8) = ComboBox1.SelectedItem.ToString
+                arrData(i, 9) = TextBox7.Text
+                arrData(i, 10) = TextBox9.Text
+                arrData(i, 11) = ComboBox2.SelectedItem.ToString
+                arrData(i, 12) = ComboBox3.SelectedItem.ToString
+                arrData(i, 13) = ListBox1.SelectedItem.ToString
+                arrData(i, 14) = DateTimePicker1.Value.Date
+                arrData(i, 15) = DateTimePicker2.Value.Date
 
-            If (RadioButton1.Checked) Then
-                arrData(i, 16) = RadioButton1.Text
-            End If
-
-            If (RadioButton2.Checked) Then
-                arrData(i, 16) = RadioButton2.Text
-            End If
-
-            If (RadioButton3.Checked) Then
-                arrData(i, 16) = RadioButton3.Text
-            End If
-
-            If (RadioButton4.Checked) Then
-                arrData(i, 16) = RadioButton4.Text
-            End If
-
-            If (RadioButton5.Checked) Then
-                arrData(i, 17) = RadioButton5.Text
-            End If
-
-            If (RadioButton6.Checked) Then
-                arrData(i, 17) = RadioButton6.Text
-            End If
-
-            If (roomType = "double") Then
-                If (RadioButton7.Checked) Then
-                    arrData(i, 18) = RadioButton7.Text
+                If (RadioButton1.Checked) Then
+                    arrData(i, 16) = RadioButton1.Text
                 End If
 
-                If (RadioButton8.Checked) Then
-                    arrData(i, 18) = RadioButton8.Text
+                If (RadioButton2.Checked) Then
+                    arrData(i, 16) = RadioButton2.Text
                 End If
+
+                If (RadioButton3.Checked) Then
+                    arrData(i, 16) = RadioButton3.Text
+                End If
+
+                If (RadioButton4.Checked) Then
+                    arrData(i, 16) = RadioButton4.Text
+                End If
+
+                If (RadioButton5.Checked) Then
+                    arrData(i, 17) = RadioButton5.Text
+                End If
+
+                If (RadioButton6.Checked) Then
+                    arrData(i, 17) = RadioButton6.Text
+                End If
+
+                If (roomType = "double") Then
+                    If (RadioButton7.Checked) Then
+                        arrData(i, 18) = RadioButton7.Text
+                    End If
+
+                    If (RadioButton8.Checked) Then
+                        arrData(i, 18) = RadioButton8.Text
+                    End If
+                Else
+                    arrData(i, 18) = "null"
+                End If
+
+                i = i + 1
+                Label18.Show()
+                GroupBox1.Hide()
+                GroupBox2.Hide()
+                GroupBox3.Hide()
+                GroupBox4.Hide()
+                GroupBox7.Hide()
+                Button1.Hide()
+                Button2.Hide()
+                clearFormData()
+                MsgBox(arrData(i - 1, 13) + " Successfully booked! Thank you :)")
             Else
-                arrData(i, 18) = "null"
+                If roomAvailable = False Then
+                    Label17.Text = "Room Not Available"
+                    Label17.ForeColor = Color.Red
+                End If
+                If full = True Then
+                    Label17.Text += vbCrLf & "We are fully booked!"
+                End If
             End If
-
-            i = i + 1
-            Label18.Show()
-            GroupBox1.Hide()
-            GroupBox2.Hide()
-            GroupBox3.Hide()
-            GroupBox4.Hide()
-            GroupBox7.Hide()
-            Button1.Hide()
-            Button2.Hide()
-            clearFormData()
-            MsgBox(arrData(i - 1, 13) + " Successfully booked! Thank you :)")
         Else
-            If roomAvailable = False Then
-                Label17.Text = "Room Not Available"
-                Label17.ForeColor = Color.Red
-            End If
-            If full = True Then
-                Label17.Text += " We are fully booked!"
-            End If
-            If arrErrors > 0 Then
-                Dim a As Integer
-                a = arrErrors
-                Label17.Text += " Form has errors, please check!"
-            End If
+            Label17.Text = "Form has errors, please check!"
         End If
+
     End Sub
     Private Sub TextBox1_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox1.TextChanged
         ErrLabel1.Text = ""
@@ -186,12 +189,19 @@
         arrErrors = arrErrors - 1
     End Sub
     Private Sub TextBox7_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox7.TextChanged
-        ErrLabel8.Text = ""
-        arrErrors = arrErrors - 1
+        Dim email = EmailAddressCheck(TextBox7.Text)
+        If email = True Then
+            ErrLabel8.Text = ""
+            arrErrors = arrErrors - 1
+        End If
     End Sub
     Private Sub TextBox8_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox8.TextChanged
-        ErrLabel9.Text = ""
-        arrErrors = arrErrors - 1
+        If TextBox8.Text = TextBox7.Text Then
+            ErrLabel9.Text = ""
+            arrErrors = arrErrors - 1
+        Else
+            ErrLabel9.Text = "*"
+        End If
     End Sub
     Private Sub TextBox9_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox9.TextChanged
         ErrLabel10.Text = ""
@@ -312,5 +322,33 @@
         arrErrors = 0
         populateErrorlabels()
     End Sub
+    Function checkAllFields()
+        Dim fieldFlag As Boolean = False
+        If roomType = "single" Then
+            If ErrLabel1.Text = "*" Or ErrLabel2.Text = "*" Or ErrLabel3.Text = "*" Or ErrLabel4.Text = "*" Or ErrLabel5.Text = "*" Or ErrLabel6.Text = "*" Or ErrLabel7.Text = "*" Or ErrLabel8.Text = "*" Or ErrLabel9.Text = "*" Or ErrLabel10.Text = "*" Or ErrLabel11.Text = "*" Or ErrLabel12.Text = "*" Or ErrLabel13.Text = "*" Or ErrLabel16.Text = "*" Or ErrLabel17.Text = "*" Then
+                fieldFlag = False
+            Else
+                fieldFlag = True
+            End If
+        Else
+            If ErrLabel1.Text = "*" Or ErrLabel2.Text = "*" Or ErrLabel3.Text = "*" Or ErrLabel4.Text = "*" Or ErrLabel5.Text = "*" Or ErrLabel6.Text = "*" Or ErrLabel7.Text = "*" Or ErrLabel8.Text = "*" Or ErrLabel9.Text = "*" Or ErrLabel10.Text = "*" Or ErrLabel11.Text = "*" Or ErrLabel12.Text = "*" Or ErrLabel13.Text = "*" Or ErrLabel16.Text = "*" Or ErrLabel17.Text = "*" And ErrLabel18.Text = "" Then
+                fieldFlag = True
+            Else
+                fieldFlag = False
+            End If
+        End If
 
+        Return fieldFlag
+    End Function
+    Function EmailAddressCheck(ByVal emailAddress As String) As Boolean
+
+        Dim pattern As String = "^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" + "\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" + ".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+        Dim emailAddressMatch As Match = Regex.Match(emailAddress, pattern)
+        If emailAddressMatch.Success Then
+            EmailAddressCheck = True
+        Else
+            EmailAddressCheck = False
+        End If
+        Return EmailAddressCheck
+    End Function
 End Class

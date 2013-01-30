@@ -50,7 +50,7 @@
 
                 dt.Columns.Add("Additional Requests", Type.GetType("System.String"))
 
-                For i As Integer = 0 To numbookings
+                For i As Integer = 0 To numbookings - 1
 
                     dt.Rows.Add()
 
