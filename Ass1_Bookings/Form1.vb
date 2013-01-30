@@ -22,4 +22,11 @@
             Label4.Text = "Unknown User Name or bad password."
         End If
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim f4 As New Form4
+        currForm = "Form1"
+        Me.Hide()
+        f4.Show()
+    End Sub
 End Class

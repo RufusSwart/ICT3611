@@ -1,9 +1,9 @@
 ﻿Imports System.Text.RegularExpressions
 
 Public Class Form2
-
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
         Me.Hide()
+        Form1.Label4.Text = ""
         logout()
     End Sub 'LogOut Click event
     Private Sub ViewBookingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewBookingsToolStripMenuItem.Click
@@ -12,11 +12,13 @@ Public Class Form2
         f3.Show()
     End Sub 'Show Bookings Click event
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Label1.Text = "Welcome " + user
+        Label1.Text = "Welcome " + StrConv(user, VbStrConv.ProperCase)
         Label2.Text = "Login Time: " + dateTime
         DateTimePicker1.Value = Now
         DateTimePicker2.Value = DateAdd(DateInterval.Day, 7, Now)
         Label17.Text = ""
+        Label21.Text = ""
+        Label22.Text = ""
         GroupBox1.Hide()
         GroupBox2.Hide()
         GroupBox3.Hide()
@@ -161,28 +163,57 @@ Public Class Form2
 
     End Sub
     Private Sub TextBox1_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox1.TextChanged
-        ErrLabel1.Text = ""
-        arrErrors = arrErrors - 1
+        If TextBox1.Text = "" Then
+            ErrLabel1.Text = "*"
+        Else
+            ErrLabel1.Text = ""
+        End If
     End Sub
     Private Sub TextBox2_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox2.TextChanged
-        ErrLabel2.Text = ""
-        arrErrors = arrErrors - 1
+        If TextBox2.Text = "" Then
+            ErrLabel2.Text = "*"
+        Else
+            ErrLabel2.Text = ""
+            arrErrors = arrErrors - 1
+        End If
     End Sub
     Private Sub TextBox3_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox3.TextChanged
-        ErrLabel3.Text = ""
-        arrErrors = arrErrors - 1
+        If TextBox3.Text = "" Then
+            ErrLabel3.Text = "*"
+        Else
+            ErrLabel3.Text = ""
+            arrErrors = arrErrors - 1
+        End If
     End Sub
     Private Sub TextBox4_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox4.TextChanged
-        ErrLabel4.Text = ""
-        arrErrors = arrErrors - 1
+        If TextBox4.Text = "" Then
+            ErrLabel4.Text = "*"
+        Else
+            ErrLabel4.Text = ""
+            arrErrors = arrErrors - 1
+        End If
     End Sub
     Private Sub TextBox5_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox5.TextChanged
-        ErrLabel5.Text = ""
-        arrErrors = arrErrors - 1
+        If TextBox5.Text = "" Then
+            ErrLabel5.Text = "*"
+        Else
+            ErrLabel5.Text = ""
+            arrErrors = arrErrors - 1
+        End If
     End Sub
     Private Sub TextBox6_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox6.TextChanged
-        ErrLabel6.Text = ""
-        arrErrors = arrErrors - 1
+        If TextBox6.Text = "" Then
+            ErrLabel6.Text = "*"
+        Else
+            If Regex.IsMatch(TextBox6.Text, "^[0-9 ]+$") Then
+                ErrLabel6.Text = ""
+                Label21.Text = ""
+                arrErrors = arrErrors - 1
+            Else
+                Label21.Text = "Postal code must be numbers only"
+                ErrLabel6.Text = "*"
+            End If
+        End If
     End Sub
     Private Sub ComboBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ComboBox1.SelectedIndexChanged
         ErrLabel7.Text = ""
@@ -190,9 +221,13 @@ Public Class Form2
     End Sub
     Private Sub TextBox7_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox7.TextChanged
         Dim email = EmailAddressCheck(TextBox7.Text)
-        If email = True Then
-            ErrLabel8.Text = ""
-            arrErrors = arrErrors - 1
+        If TextBox7.Text = "" Then
+            ErrLabel8.Text = "*"
+        Else
+            If email = True Then
+                ErrLabel8.Text = ""
+                arrErrors = arrErrors - 1
+            End If
         End If
     End Sub
     Private Sub TextBox8_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox8.TextChanged
@@ -204,8 +239,18 @@ Public Class Form2
         End If
     End Sub
     Private Sub TextBox9_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox9.TextChanged
-        ErrLabel10.Text = ""
-        arrErrors = arrErrors - 1
+        If TextBox9.Text = "" Then
+            ErrLabel10.Text = "*"
+        Else
+            If Regex.IsMatch(TextBox9.Text, "^[0-9 ]+$") Then
+                ErrLabel10.Text = ""
+                arrErrors = arrErrors - 1
+                Label22.Text = ""
+            Else
+                Label22.Text = "Phone must be numbers only"
+                ErrLabel10.Text = "*"
+            End If
+        End If
     End Sub
     Private Sub ComboBox2_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ComboBox2.SelectedIndexChanged
         ErrLabel11.Text = ""
@@ -303,6 +348,8 @@ Public Class Form2
         TextBox7.Text = ""
         TextBox8.Text = ""
         TextBox9.Text = ""
+        Label22.Text = ""
+        Label21.Text = ""
         ComboBox1.SelectedIndex = -1
         ComboBox2.SelectedIndex = -1
         ComboBox3.SelectedIndex = -1
@@ -331,10 +378,23 @@ Public Class Form2
                 fieldFlag = True
             End If
         Else
-            If ErrLabel1.Text = "*" Or ErrLabel2.Text = "*" Or ErrLabel3.Text = "*" Or ErrLabel4.Text = "*" Or ErrLabel5.Text = "*" Or ErrLabel6.Text = "*" Or ErrLabel7.Text = "*" Or ErrLabel8.Text = "*" Or ErrLabel9.Text = "*" Or ErrLabel10.Text = "*" Or ErrLabel11.Text = "*" Or ErrLabel12.Text = "*" Or ErrLabel13.Text = "*" Or ErrLabel16.Text = "*" Or ErrLabel17.Text = "*" And ErrLabel18.Text = "" Then
-                fieldFlag = True
-            Else
+            If ErrLabel1.Text = "*" Or ErrLabel2.Text = "*" Or ErrLabel3.Text = "*" Or ErrLabel4.Text = "*" Or ErrLabel5.Text = "*" Or ErrLabel6.Text = "*" Or ErrLabel7.Text = "*" Or ErrLabel8.Text = "*" Or ErrLabel9.Text = "*" Or ErrLabel10.Text = "*" Or ErrLabel11.Text = "*" Or ErrLabel12.Text = "*" Or ErrLabel13.Text = "*" Or ErrLabel16.Text = "*" Or ErrLabel17.Text = "*" Or ErrLabel18.Text = "*" Then
                 fieldFlag = False
+            Else
+                fieldFlag = True
+            End If
+        End If
+
+        If DateTimePicker2.Value < DateTimePicker1.Value Then
+            fieldFlag = False
+            If Label21.Text = "" Then
+                Label21.Text = "Departure date must be after araival date!"
+            Else
+                If Label22.Text = "" Then
+                    Label22.Text = "Departure date must be after araival date!"
+                Else
+                    Label17.Text += "Departure date must be after araival date!"
+                End If
             End If
         End If
 
@@ -351,4 +411,10 @@ Public Class Form2
         End If
         Return EmailAddressCheck
     End Function
+    Private Sub HelpToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HelpToolStripMenuItem.Click
+        Dim f4 As New Form4
+        currForm = "Form2"
+        Me.Hide()
+        f4.Show()
+    End Sub
 End Class

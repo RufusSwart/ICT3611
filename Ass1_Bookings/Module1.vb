@@ -12,6 +12,7 @@
     Public numbookings As Integer
     Public flag As Integer
     Public full As Boolean
+    Public currForm As String
     Function authenticate(ByRef name As String, ByRef pass As String, ByRef time As String) As Boolean
         Dim auth As Boolean
 

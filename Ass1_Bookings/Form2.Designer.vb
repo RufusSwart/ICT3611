@@ -22,6 +22,7 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.CreateBookingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SingleBookingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -89,6 +90,8 @@ Partial Class Form2
         Me.RadioButton8 = New System.Windows.Forms.RadioButton()
         Me.RadioButton7 = New System.Windows.Forms.RadioButton()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.RadioButton5 = New System.Windows.Forms.RadioButton()
         Me.RadioButton6 = New System.Windows.Forms.RadioButton()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -97,6 +100,12 @@ Partial Class Form2
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -104,7 +113,11 @@ Partial Class Form2
         Me.GroupBox4.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox7.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -112,7 +125,7 @@ Partial Class Form2
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreateBookingsToolStripMenuItem, Me.ViewBookingsToolStripMenuItem, Me.HelpToolStripMenuItem, Me.LogoutToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1061, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1052, 24)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -570,7 +583,7 @@ Partial Class Form2
         '
         Me.ErrLabel13.AutoSize = True
         Me.ErrLabel13.ForeColor = System.Drawing.Color.Red
-        Me.ErrLabel13.Location = New System.Drawing.Point(93, 21)
+        Me.ErrLabel13.Location = New System.Drawing.Point(86, 19)
         Me.ErrLabel13.Margin = New System.Windows.Forms.Padding(1, 0, 3, 0)
         Me.ErrLabel13.Name = "ErrLabel13"
         Me.ErrLabel13.Size = New System.Drawing.Size(68, 15)
@@ -724,11 +737,15 @@ Partial Class Form2
         '
         'GroupBox6
         '
+        Me.GroupBox6.Controls.Add(Me.Label24)
+        Me.GroupBox6.Controls.Add(Me.Label23)
+        Me.GroupBox6.Controls.Add(Me.PictureBox4)
+        Me.GroupBox6.Controls.Add(Me.PictureBox3)
         Me.GroupBox6.Controls.Add(Me.RadioButton8)
         Me.GroupBox6.Controls.Add(Me.RadioButton7)
         Me.GroupBox6.Location = New System.Drawing.Point(9, 119)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(267, 84)
+        Me.GroupBox6.Size = New System.Drawing.Size(267, 107)
         Me.GroupBox6.TabIndex = 3
         Me.GroupBox6.TabStop = False
         '
@@ -756,18 +773,38 @@ Partial Class Form2
         '
         'GroupBox5
         '
+        Me.GroupBox5.Controls.Add(Me.PictureBox2)
+        Me.GroupBox5.Controls.Add(Me.PictureBox1)
         Me.GroupBox5.Controls.Add(Me.RadioButton5)
         Me.GroupBox5.Controls.Add(Me.RadioButton6)
-        Me.GroupBox5.Location = New System.Drawing.Point(9, 21)
+        Me.GroupBox5.Location = New System.Drawing.Point(9, 19)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(268, 76)
+        Me.GroupBox5.Size = New System.Drawing.Size(268, 94)
         Me.GroupBox5.TabIndex = 2
         Me.GroupBox5.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = CType(resources.GetObject("PictureBox2.Image"), System.Drawing.Image)
+        Me.PictureBox2.Location = New System.Drawing.Point(120, 21)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(83, 50)
+        Me.PictureBox2.TabIndex = 3
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(30, 23)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(60, 46)
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
         '
         'RadioButton5
         '
         Me.RadioButton5.AutoSize = True
-        Me.RadioButton5.Location = New System.Drawing.Point(11, 34)
+        Me.RadioButton5.Location = New System.Drawing.Point(11, 37)
         Me.RadioButton5.Name = "RadioButton5"
         Me.RadioButton5.Size = New System.Drawing.Size(79, 20)
         Me.RadioButton5.TabIndex = 0
@@ -778,12 +815,12 @@ Partial Class Form2
         'RadioButton6
         '
         Me.RadioButton6.AutoSize = True
-        Me.RadioButton6.Location = New System.Drawing.Point(130, 34)
+        Me.RadioButton6.Location = New System.Drawing.Point(102, 36)
         Me.RadioButton6.Name = "RadioButton6"
-        Me.RadioButton6.Size = New System.Drawing.Size(108, 20)
+        Me.RadioButton6.Size = New System.Drawing.Size(101, 20)
         Me.RadioButton6.TabIndex = 1
         Me.RadioButton6.TabStop = True
-        Me.RadioButton6.Text = "Non-Smoking"
+        Me.RadioButton6.Text = "No-Smoking"
         Me.RadioButton6.UseVisualStyleBackColor = True
         '
         'Button1
@@ -845,11 +882,69 @@ Partial Class Form2
         Me.Label18.TabIndex = 10
         Me.Label18.Text = "Please select the appropriate Menu item"
         '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.ForeColor = System.Drawing.Color.Red
+        Me.Label21.Location = New System.Drawing.Point(412, 387)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(45, 13)
+        Me.Label21.TabIndex = 12
+        Me.Label21.Text = "Label21"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.ForeColor = System.Drawing.Color.Red
+        Me.Label22.Location = New System.Drawing.Point(412, 407)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(45, 13)
+        Me.Label22.TabIndex = 13
+        Me.Label22.Text = "Label22"
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(30, 21)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(88, 50)
+        Me.PictureBox3.TabIndex = 2
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = CType(resources.GetObject("PictureBox4.Image"), System.Drawing.Image)
+        Me.PictureBox4.Location = New System.Drawing.Point(148, 19)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(105, 60)
+        Me.PictureBox4.TabIndex = 3
+        Me.PictureBox4.TabStop = False
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Location = New System.Drawing.Point(30, 78)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(74, 16)
+        Me.Label23.TabIndex = 4
+        Me.Label23.Text = "Single Bed"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(147, 82)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(71, 16)
+        Me.Label24.TabIndex = 5
+        Me.Label24.Text = "Twin Beds"
+        '
         'Form2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1061, 474)
+        Me.ClientSize = New System.Drawing.Size(1052, 474)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.Label18)
         Me.Controls.Add(Me.GroupBox7)
         Me.Controls.Add(Me.Button2)
@@ -863,7 +958,7 @@ Partial Class Form2
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form2"
-        Me.Text = "Form2"
+        Me.Text = "The Bear & The Troll Tavern -- Main"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
@@ -878,8 +973,12 @@ Partial Class Form2
         Me.GroupBox6.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
         Me.GroupBox5.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -959,4 +1058,12 @@ Partial Class Form2
     Friend WithEvents ErrLabel17 As System.Windows.Forms.Label
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents Label20 As System.Windows.Forms.Label
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
 End Class

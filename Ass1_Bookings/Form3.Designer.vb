@@ -63,7 +63,7 @@ Partial Class Form3
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form3"
-        Me.Text = "Form3"
+        Me.Text = "The Bear & The Troll Tavern -- View Bookings"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
