@@ -33,6 +33,8 @@ Partial Class Form2
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.TextBox6 = New System.Windows.Forms.MaskedTextBox()
+        Me.TextBox9 = New System.Windows.Forms.MaskedTextBox()
         Me.ErrLabel12 = New System.Windows.Forms.Label()
         Me.ErrLabel11 = New System.Windows.Forms.Label()
         Me.ErrLabel10 = New System.Windows.Forms.Label()
@@ -47,11 +49,9 @@ Partial Class Form2
         Me.ErrLabel1 = New System.Windows.Forms.Label()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -190,6 +190,8 @@ Partial Class Form2
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.TextBox6)
+        Me.GroupBox1.Controls.Add(Me.TextBox9)
         Me.GroupBox1.Controls.Add(Me.ErrLabel12)
         Me.GroupBox1.Controls.Add(Me.ErrLabel11)
         Me.GroupBox1.Controls.Add(Me.ErrLabel10)
@@ -204,11 +206,9 @@ Partial Class Form2
         Me.GroupBox1.Controls.Add(Me.ErrLabel1)
         Me.GroupBox1.Controls.Add(Me.ComboBox3)
         Me.GroupBox1.Controls.Add(Me.ComboBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox9)
         Me.GroupBox1.Controls.Add(Me.TextBox8)
         Me.GroupBox1.Controls.Add(Me.TextBox7)
         Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
         Me.GroupBox1.Controls.Add(Me.TextBox5)
         Me.GroupBox1.Controls.Add(Me.TextBox4)
         Me.GroupBox1.Controls.Add(Me.TextBox3)
@@ -233,6 +233,23 @@ Partial Class Form2
         Me.GroupBox1.TabIndex = 3
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Guest Information"
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Location = New System.Drawing.Point(272, 209)
+        Me.TextBox6.Mask = "0000"
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.Size = New System.Drawing.Size(34, 21)
+        Me.TextBox6.TabIndex = 17
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(214, 336)
+        Me.TextBox9.Mask = "(999) 000-0000"
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.RejectInputOnFirstFailure = True
+        Me.TextBox9.Size = New System.Drawing.Size(92, 21)
+        Me.TextBox9.TabIndex = 21
         '
         'ErrLabel12
         '
@@ -372,13 +389,6 @@ Partial Class Form2
         Me.ComboBox2.Size = New System.Drawing.Size(61, 23)
         Me.ComboBox2.TabIndex = 22
         '
-        'TextBox9
-        '
-        Me.TextBox9.Location = New System.Drawing.Point(122, 335)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(184, 21)
-        Me.TextBox9.TabIndex = 21
-        '
         'TextBox8
         '
         Me.TextBox8.Location = New System.Drawing.Point(122, 307)
@@ -401,13 +411,6 @@ Partial Class Form2
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(184, 23)
         Me.ComboBox1.TabIndex = 18
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(122, 211)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(184, 21)
-        Me.TextBox6.TabIndex = 17
         '
         'TextBox5
         '
@@ -1004,7 +1007,6 @@ Partial Class Form2
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
@@ -1015,7 +1017,6 @@ Partial Class Form2
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
-    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Label16 As System.Windows.Forms.Label
@@ -1066,4 +1067,6 @@ Partial Class Form2
     Friend WithEvents Label23 As System.Windows.Forms.Label
     Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
     Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents TextBox9 As System.Windows.Forms.MaskedTextBox
+    Friend WithEvents TextBox6 As System.Windows.Forms.MaskedTextBox
 End Class

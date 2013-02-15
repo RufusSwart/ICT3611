@@ -13,6 +13,8 @@
     Public flag As Integer
     Public full As Boolean
     Public currForm As String
+    Public tmp_phonenumber As String
+    Public tmp_Zipnumber As String
     Function authenticate(ByRef name As String, ByRef pass As String, ByRef time As String) As Boolean
         Dim auth As Boolean
 
@@ -35,10 +37,10 @@
         Form1.Show()
     End Sub
 
-    Function checkAvailability(ByRef room As String, ByRef startDate As String, ByRef endDate As String)
+    Function checkAvailability(ByVal room As String, ByVal startDate As String, ByVal endDate As String)
         Dim avStatus As Boolean
         Dim arrLength As Integer = 0
-
+        flag = 0
         arrLength = getArrayLength()
         If arrLength = 0 Then
             flag = 0

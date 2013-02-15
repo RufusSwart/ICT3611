@@ -209,13 +209,20 @@ Public Class Form2
         End If
     End Sub
     Private Sub TextBox6_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox6.TextChanged
-        If TextBox6.Text = "" Then
+        TextBox6.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals
+        tmp_Zipnumber = TextBox6.Text
+        If tmp_Zipnumber = "" Then
             ErrLabel6.Text = "*"
         Else
-            If Regex.IsMatch(TextBox6.Text, "^[0-9 ]+$") Then
-                ErrLabel6.Text = ""
-                Label21.Text = ""
-                arrErrors = arrErrors - 1
+            If Regex.IsMatch(tmp_Zipnumber, "^[0-9 ]+$") Then
+                If tmp_Zipnumber.Length = 4 Then
+                    ErrLabel6.Text = ""
+                    Label21.Text = ""
+                    arrErrors = arrErrors - 1
+                Else
+                    Label21.Text = "Postal code must be 4 numbers"
+                    ErrLabel6.Text = "*"
+                End If
             Else
                 Label21.Text = "Postal code must be numbers only"
                 ErrLabel6.Text = "*"
@@ -246,15 +253,21 @@ Public Class Form2
         End If
     End Sub
     Private Sub TextBox9_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles TextBox9.TextChanged
-        If TextBox9.Text = "" Then
+        TextBox9.TextMaskFormat = MaskFormat.ExcludePromptAndLiterals
+        tmp_phonenumber = TextBox9.Text
+        If tmp_phonenumber = "" Then
             ErrLabel10.Text = "*"
         Else
-            If Regex.IsMatch(TextBox9.Text, "^[0-9 ]+$") Then
+            If Regex.IsMatch(tmp_phonenumber, "^[0-9 ]+$") Then
                 ErrLabel10.Text = ""
                 arrErrors = arrErrors - 1
                 Label22.Text = ""
-            Else
+            ElseIf tmp_phonenumber Then
                 Label22.Text = "Phone must be numbers only"
+                ErrLabel10.Text = "*"
+            End If
+            If tmp_phonenumber.Length <= 9 Then
+                Label22.Text = "Phone number must be 10 digits"
                 ErrLabel10.Text = "*"
             End If
         End If
@@ -269,6 +282,7 @@ Public Class Form2
     End Sub
     Private Sub ListBox1_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles ListBox1.SelectedIndexChanged
         ErrLabel13.Text = ""
+        Label17.Text = ""
         arrErrors = arrErrors - 1
     End Sub
     Private Sub RadioButton1_CheckedChanged(ByVal sender As Object, ByVal e As EventArgs) Handles RadioButton1.CheckedChanged
